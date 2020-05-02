@@ -1,9 +1,19 @@
+sp:
+  order-service:
+    order: "[{\"id\":1, \"ordername\":\"orderabc\"},{\"id\":8, \"ordername\":\"orderdef\"}]"
 spring:
   application:
     name: order-service
   cloud:
     config:
       override-none: true  
+  rabbitmq:
+    host: 192.168.201.129
+    port: 5672
+    username: admin
+    password: admin
+    
+    
 server:
   port: 8201
 eureka:
